@@ -1,0 +1,47 @@
+section {
+  margin: 4em 0;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 2em;
+  display: inline;
+}
+
+.nav-item__link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-item__link.-active {
+  text-decoration: underline;
+}
+
+.nav-item__link:hover {
+  text-decoration: underline;
+}
+
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  border-bottom: 1px solid currentColor;
+  padding: 1em;
+}
+
+.list-item__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-item__asset {
+  height: 50px;
+  width: 50px;
+}

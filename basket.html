@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+<body>
+  <header>
+    <h1>Basket Example</h1>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-item__link" href="/index.html">Grocery List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item__link -active" href="/basket.html">Basket</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>Basket</h2>
+    <ul id="basketList" class="list">
+    </ul>
+  </section>
+
+  <template id="basketItemTemplate">
+    <li class="list-item" data-id="{{id}}" data-title="{{title}}" data-img="{{img}}">
+      <h3>{{title}}</h3>
+      <div class="list-item__inner">
+          <img class="list-item__asset" src="./assets/{{img}}" alt="{{title}}" style="height: 50px; width: 50px;">
+          <div class="list-item__aside">
+            <span data-ref="count" data-text="Count: %count%">Count: {{count}}</span>
+            <div class="list-item__actions">
+              <button onclick="updateCount(this, {{id}}, false)">-</button>
+              <button onclick="updateCount(this, {{id}}, true)">+</button>
+            </div>
+          </div>
+      </div>
+    </li>
+  </template>
+
+  <script src="./js/localStorage.js"></script>
+  <script src="./js/basket.js"></script>
+
+</body>
+</html>

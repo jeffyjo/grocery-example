@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+<body>
+  <header>
+    <h1>Basket Example</h1>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-item__link -active" href="/index.html">Grocery List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item__link" href="/basket.html">Basket</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Grocery to buy</h2>
+    <ul id="groceryList" class="list">
+    </ul>
+  </section>
+
+  <template id="groceryItemTemplate">
+    <li class="list-item" data-id="{{id}}" data-title="{{title}}" data-img="{{img}}">
+      <h3>{{title}}</h3>
+      <div class="list-item__inner">
+        <img class="list-item__asset" src="./assets/{{img}}" alt="{{title}}">
+        <button onclick="addToBasket(this, {{id}})">Add to basket</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="./js/localStorage.js"></script>
+  <script src="./js/grocery.js"></script>
+
+</body>
+</html>
