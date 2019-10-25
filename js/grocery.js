@@ -6,7 +6,7 @@
   if (groceryList.children.length > 0) return
 
   // Fetch groceries
-  const groceries = await fetch('/js/grocery.json')
+  const groceries = await fetch('./js/grocery.json')
     .then(res => res.json())
 
   // Append grocieries
